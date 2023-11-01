@@ -35,6 +35,8 @@ config :vite_phx,
   release_app: :demo,
   # to tell prod and dev env appart
   environment: Mix.env(),
+  # URL/path from which to load assets (in production)
+  asset_prefix: "https://static.example.com/", # defaults to "/"
   # this manifest is different from the Phoenix "cache_manifest.json"!
   vite_manifest: "priv/static/manifest.json", # optional
   phx_manifest: "priv/static/cache_manifest.json", # optional

@@ -6,6 +6,7 @@ defmodule Vite.Config do
     %{
       release_app: release_app(),
       current_env: current_env(),
+      asset_prefix: asset_prefix(),
       vite_manifest: vite_manifest(),
       phx_manifest: phx_manifest(),
       json_library: json_library(),
@@ -24,6 +25,10 @@ defmodule Vite.Config do
 
   def current_env() do
     Application.get_env(:vite_phx, :environment, :dev)
+  end
+
+  def asset_prefix() do
+    Application.get_env(:vite_phx, :asset_prefix, "/")
   end
 
   def phx_manifest() do
